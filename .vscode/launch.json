@@ -1,0 +1,42 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'newsletter'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=newsletter",
+                    "--package=newsletter"
+                ],
+                "filter": {
+                    "name": "newsletter",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'newsletter'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=newsletter",
+                    "--package=newsletter"
+                ],
+                "filter": {
+                    "name": "newsletter",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
